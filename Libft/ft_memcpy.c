@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 12:57:04 by ekarabud          #+#    #+#             */
-/*   Updated: 2023/10/21 19:21:23 by ekarabud         ###   ########.fr       */
+/*   Created: 2023/10/21 18:36:14 by ekarabud          #+#    #+#             */
+/*   Updated: 2023/10/21 19:21:51 by ekarabud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	size_t i;
+
+	i = 0;
+	if (dst == src || !n)
+	{
+		return (dst);
+	}
+
+	while (i < n)
+	{
+		(*(unsigned char *)dst) = (*(unsigned char *)src);
+		dst++;
+		src++;
+		i++;
+	}
+	dst -= i;
+	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:01:20 by ekarabud          #+#    #+#             */
-/*   Updated: 2023/10/18 13:10:48 by ekarabud         ###   ########.fr       */
+/*   Updated: 2023/10/21 19:22:17 by ekarabud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	len;
+	size_t len;
 
 	len = 0;
 	while (s[len] != '\0')

@@ -6,14 +6,13 @@
 /*   By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:38:44 by ekarabud          #+#    #+#             */
-/*   Updated: 2023/10/18 13:39:27 by ekarabud         ###   ########.fr       */
+/*   Updated: 2023/10/21 19:17:23 by ekarabud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90)
-        return (c + 32);
-    return (c);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }

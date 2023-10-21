@@ -6,13 +6,13 @@
 /*   By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:36:02 by ekarabud          #+#    #+#             */
-/*   Updated: 2023/10/18 13:38:12 by ekarabud         ###   ########.fr       */
+/*   Updated: 2023/10/21 19:17:25 by ekarabud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 97 && c <= 122)
-        return (c - 32);
-    return (c);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }
