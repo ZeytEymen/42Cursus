@@ -6,7 +6,7 @@
 #    By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/18 13:12:00 by ekarabud          #+#    #+#              #
-#    Updated: 2023/10/21 18:37:52 by ekarabud         ###   ########.fr        #
+#    Updated: 2023/10/22 17:11:59 by ekarabud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,19 +34,16 @@ all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	gcc $(FLAGS) -c $(SRCS)
+	$(CC) $(FLAGS) -c $(SRCS)
 	ar rcs $(NAME) $(OBJS)
 
 
 clean:
-	$(RM) $(OBJS) $(BONUS_OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
 
 .PHONY: all clean fclean re bonus
