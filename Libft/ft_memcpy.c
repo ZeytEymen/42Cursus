@@ -6,7 +6,7 @@
 /*   By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 18:36:14 by ekarabud          #+#    #+#             */
-/*   Updated: 2023/10/21 19:21:51 by ekarabud         ###   ########.fr       */
+/*   Updated: 2023/10/23 16:47:29 by ekarabud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (dst == src || !n)
 	{
 		return (dst);
 	}
-
 	while (i < n)
 	{
 		(*(unsigned char *)dst) = (*(unsigned char *)src);

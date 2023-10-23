@@ -6,7 +6,7 @@
 /*   By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:05:11 by ekarabud          #+#    #+#             */
-/*   Updated: 2023/10/22 18:05:38 by ekarabud         ###   ########.fr       */
+/*   Updated: 2023/10/23 16:51:03 by ekarabud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ char	*ft_strrchr(const char *s, int c)
 		if (s[i] == (char)c)
 			return ((char *)&s[i]);
 		i--;
-	}	
+	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 17:06:52 by ekarabud          #+#    #+#             */
-/*   Updated: 2023/10/21 19:21:32 by ekarabud         ###   ########.fr       */
+/*   Updated: 2023/10/23 19:35:21 by ekarabud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	while ((*(unsigned char *)s) && n)
-	{
-		(*(unsigned char *)s) = 0;
-		s++;
-		n--;
-	}
+	ft_memset(s, 0, n);
 }
