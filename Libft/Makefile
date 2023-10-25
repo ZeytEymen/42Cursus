@@ -6,7 +6,7 @@
 #    By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/18 13:12:00 by ekarabud          #+#    #+#              #
-#    Updated: 2023/10/23 15:59:40 by ekarabud         ###   ########.fr        #
+#    Updated: 2023/10/25 18:01:43 by ekarabud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRCS		= ft_isalnum.c  ft_isalpha.c \
 			  ft_strchr.c  ft_strrchr.c \
 			  ft_bzero.c  ft_memchr.c \
 			  ft_memcpy.c  ft_memset.c \
-			  ft_strlen.c ft_strnstr.c
+			  ft_strlen.c ft_strnstr.c \
+			  ft_memmove.c ft_strlcpy.c
 
 OBJS= $(SRCS:.c=.o)
 
