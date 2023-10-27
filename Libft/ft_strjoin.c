@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/25 13:59:48 by ekarabud          #+#    #+#             */
-/*   Updated: 2023/10/27 17:00:43 by ekarabud         ###   ########.fr       */
+/*   Created: 2023/10/27 19:39:52 by ekarabud          #+#    #+#             */
+/*   Updated: 2023/10/27 19:42:06 by ekarabud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	const unsigned char	*s;
-	unsigned char		*d;
+	char	*new;
+	size_t	i;
+	size_t	location;
 
-	s = (unsigned char *)src;
-	d = (unsigned char *)dst;
-	if (dst == src || !len)
-		return (d);
-	if (dst < src)
-		return (ft_memcpy(d, s, len));
-	else
+	if (!(new = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
+		return (NULL);
+	i = 0;
+	location = 0;
+	while (s1[i])
 	{
-		while (len > 0)
-		{
-			d[len - 1] = s[len - 1];
-			len--;
-		}
+		new[location] = s1[i];
+		i++;
+		location++;
 	}
-	return (d);
+	i = 0;
+	while (s2[i])
+	{
+		new[location] = s2[i];
+		i++;
+		location++;
+	}
+    new[location] = '\0';
+	return (new);
 }
