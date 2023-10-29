@@ -6,7 +6,7 @@
 #    By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/18 13:12:00 by ekarabud          #+#    #+#              #
-#    Updated: 2023/10/27 20:54:31 by ekarabud         ###   ########.fr        #
+#    Updated: 2023/10/29 16:41:57 by ekarabud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRCS		= ft_isalnum.c  ft_isalpha.c \
 			  ft_memmove.c ft_strlcpy.c \
 			  ft_strlcat.c ft_calloc.c \
 			  ft_strdup.c ft_substr.c \
-			  ft_strjoin.c ft_strtrim.c
+			  ft_strjoin.c ft_strtrim.c \
+			  ft_split.c
 
 OBJS= $(SRCS:.c=.o)
 

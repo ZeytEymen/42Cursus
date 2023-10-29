@@ -6,7 +6,7 @@
 /*   By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:15:30 by ekarabud          #+#    #+#             */
-/*   Updated: 2023/10/27 20:54:14 by ekarabud         ###   ########.fr       */
+/*   Updated: 2023/10/29 16:41:49 by ekarabud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strdup(const char *s1);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char    *ft_strtrim(char const *s1, char const *set);
+
+char	**ft_split(char const *s, char c);
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
