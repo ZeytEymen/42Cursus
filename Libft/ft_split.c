@@ -6,7 +6,7 @@
 /*   By: ekarabud <ekarabud@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 16:41:07 by ekarabud          #+#    #+#             */
-/*   Updated: 2023/10/29 18:57:33 by ekarabud         ###   ########.fr       */
+/*   Updated: 2023/10/30 14:05:48 by ekarabud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ static int	sep_count(char const *s, char c)
 	sep = 0;
 	while (s[i])
 	{
-		if (s[i++] == c)
+		if (s[i] == c && s[i - 1] != '\0' && s[i - 1] != c)
 			sep++;
+		i++;
 	}
 	if (s[i - 1] != c)
 		sep++;
@@ -46,19 +47,19 @@ char	**ft_split(char const *s, char c)
 	int		spl_i;
 
 	spl_i = 0;
-	split = malloc(sizeof(char *) * sep_count(s, c) + 1);
+	split = malloc(sizeof(char *) * (sep_count(s, c) + 1));
 	if (!s || !split)
-		return (0);
+		return (NULL);
 	while (*s)
 	{
 		while (*s == c && *s)
 			s++;
 		if (*s == '\0')
-			break ;
+			break;
 		split[spl_i] = ft_substr(s, 0, (size_t)substr_count(s, c));
 		spl_i++;
 		s += substr_count(s, c);
 	}
-	split[spl_i] = 0;
+	split[spl_i] = NULL;
 	return (split);
 }
